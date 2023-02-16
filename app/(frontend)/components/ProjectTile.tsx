@@ -5,7 +5,7 @@ import { TProject } from "../../../util/sanity/types";
 function ProjectTile({ project }: { project: TProject }) {
   return (
     <div>
-      <Image src={urlFor(project.preview_image).url()} alt={project.title} height={400} width={400} />
+      <Image src={urlFor(project.preview_image).url()} alt={project.title} height={1000} width={1000} />
       <h3 className="text-lg">{project.title}</h3>
       <div className="flex">
         {project.stack.map((technology) => (

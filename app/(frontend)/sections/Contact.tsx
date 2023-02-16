@@ -6,9 +6,8 @@ async function ContactSection() {
   return (
     <section id="contact">
       <div className="w-20 sm:w-40 h-1 bg-gradient-to-r from-rose-500 to-violet-500 rounded-full" />
-      <h1 className="text-gradient py-10 text-5xl">Kontakt</h1>
+      <h1 className="text-gradient py-10 text-3xl lg:text-5xl">Kontakt</h1>
 
-      {/* <div className="border-b border-gray-500 w-full my-10"></div> */}
       <p className="font-bold text-gray-500 text-lg">E-Mail</p>
       <a href="mailto:finn.evermann@icloud.com" className="text-gradient text-lg">
         finn.evermann@icloud.com
