@@ -1,17 +1,23 @@
-import type { Metadata } from 'next';
-import HomeSection from './sections/HomeSection';
+import type { Metadata } from "next";
+import LandingSection from "./sections/Landing";
+import ContactSection from "./sections/Contact";
+import ProjectsSection from "./sections/Projects";
 
 export const metadata: Metadata = {
   title: {
-    default: 'Finn Evermann | Portfolio',
-    template: '%s | Portfolio',
+    default: "Finn Evermann | Portfolio",
+    template: "%s | Portfolio",
   },
 };
 
 export default function Page() {
   return (
     <>
-      <HomeSection />
+      <LandingSection />
+      {/* @ts-expect-error Server Component */}
+      <ProjectsSection />
+      {/* @ts-expect-error Server Component */}
+      <ContactSection />
     </>
   );
 }

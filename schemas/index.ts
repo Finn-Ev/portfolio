@@ -1,13 +1,5 @@
-import generalCategory from './generalCategory';
-import socialIcons from './socialIcon';
-import technology from './technology';
-import resume from './resume';
-import project from './project';
+import socialIcons from "./socialIcon";
+import project from "./project";
+import technology from "./technology";
 
-export const schemaTypes = [
-  generalCategory,
-  socialIcons,
-  technology,
-  resume,
-  project,
-];
+export const schemaTypes = [project, socialIcons, technology];

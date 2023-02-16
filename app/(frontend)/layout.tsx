@@ -1,25 +1,16 @@
-import '../../styles/global.css';
-import { fetchSocialIcons } from '../../util/sanity/fetchData';
-import Header from './components/Header';
-import ThemeProvider from './ThemeProvider';
+import "../../styles/global.css";
+import { fetchSocialIcons } from "../../util/sanity/fetchData";
 
-export default async function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const socialIcons = await fetchSocialIcons();
   return (
     <html>
       <head />
-      <body>
-        <ThemeProvider>
-          {/* @ts-expect-error Server Component */}
-          <Header socialIcons={socialIcons} />
-          <main className="overflow-x-hidden overflow-y-scroll bg-violet-50 text-zinc-800 dark:bg-zinc-900 dark:text-white ">
-            {children}
-          </main>
-        </ThemeProvider>
+      <body className="bg-zinc-900 text-white">
+        {/* <Header /> */}
+        <main className="md:max-w-[800px] lg:max-w-[1000px] xl:max-w-[1200px] m-auto px-10 py-12 lg:py-28">
+          {children}
+        </main>
       </body>
     </html>
   );

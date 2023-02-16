@@ -1,24 +1,24 @@
-import { defineField, defineType } from 'sanity';
+import { defineField, defineType } from "sanity";
 
 export default defineType({
-  name: 'socialIcon',
-  title: 'Social Media Icons',
-  type: 'document',
+  name: "socialIcon",
+  title: "Social Media Icons",
+  type: "document",
   fields: [
     defineField({
-      name: 'name',
-      title: 'Name',
-      type: 'string',
+      name: "name",
+      title: "Name",
+      type: "string",
     }),
     defineField({
-      name: 'url',
-      title: 'Url',
-      type: 'string',
+      name: "url",
+      title: "Url",
+      type: "string",
     }),
     defineField({
-      name: 'bgColor',
-      title: 'Hintergrundfarbe (Hex)',
-      type: 'string',
+      name: "bgColor",
+      title: "Hintergrundfarbe (#Hex)",
+      type: "string",
     }),
   ],
 });
