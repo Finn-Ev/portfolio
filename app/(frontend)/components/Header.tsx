@@ -1,10 +1,12 @@
 import Link from 'next/link';
 import { GrCloudlinux } from 'react-icons/gr';
 import { SocialIcon } from 'react-social-icons';
+import { fetchSocialIcons } from '../../../util/sanity/fetchData';
+import { TSocialIcon } from '../../../util/sanity/types';
 
-interface IHeader {}
+export default async function () {
+  const socialIcons = await fetchSocialIcons();
 
-const Header: React.FC<IHeader> = ({}) => {
   return (
     <header className="bg-violet-100 text-zinc-800 dark:bg-zinc-800 dark:text-white z-20 flex items-center justify-between px-5 py-3 shadow-lg h-[60] sticky top-0">
       <Link
@@ -31,22 +33,17 @@ const Header: React.FC<IHeader> = ({}) => {
         </a>
       </div>
       <div className="flex items-center space-x-2">
-        <SocialIcon
-          url="https://www.linkedin.com/in/finn-evermann-50148023b/"
-          style={{ width: 30, height: 30 }}
-          fgColor="white"
-          target={'_blank'}
-        />
-        <SocialIcon
-          url="https://github.com/Finn-Ev"
-          style={{ width: 30, height: 30 }}
-          fgColor="white"
-          bgColor="black"
-          target={'_blank'}
-        />
+        {socialIcons.map(icon => (
+          <SocialIcon
+            url={icon.url}
+            style={{ width: 30, height: 30 }}
+            fgColor="white"
+            bgColor={icon.bgColor}
+            target={'_blank'}
+            key={icon._id}
+          />
+        ))}
       </div>
     </header>
   );
-};
-
-export default Header;
+}

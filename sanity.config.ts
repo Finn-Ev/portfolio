@@ -12,7 +12,6 @@ export default defineConfig({
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET!,
 
   plugins: [deskTool(), visionTool()],
-
   schema: {
     types: schemaTypes,
   },

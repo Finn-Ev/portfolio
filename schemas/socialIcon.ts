@@ -1,7 +1,7 @@
 import { defineField, defineType } from 'sanity';
 
 export default defineType({
-  name: 'socialIcons',
+  name: 'socialIcon',
   title: 'Social Media Icons',
   type: 'document',
   fields: [
@@ -13,6 +13,11 @@ export default defineType({
     defineField({
       name: 'url',
       title: 'Url',
+      type: 'string',
+    }),
+    defineField({
+      name: 'bgColor',
+      title: 'Hintergrundfarbe (Hex)',
       type: 'string',
     }),
   ],
