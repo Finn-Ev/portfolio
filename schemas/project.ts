@@ -11,6 +11,12 @@ export default defineType({
       type: "string",
     }),
     defineField({
+      name: "description",
+      title: "Beschreibung des Projekts",
+      type: "array",
+      of: [{ type: "block" }],
+    }),
+    defineField({
       name: "url",
       title: "URL des Projekts",
       type: "url",

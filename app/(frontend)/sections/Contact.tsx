@@ -1,7 +1,7 @@
 import { SocialIcon } from "react-social-icons";
 import { fetchSocialIcons } from "../../../util/sanity/fetchData";
 
-async function ContactSection() {
+export default async function ({ contactEmail }: { contactEmail: string }) {
   const socialIcons = await fetchSocialIcons();
   return (
     <section id="contact">
@@ -9,8 +9,8 @@ async function ContactSection() {
       <h1 className="text-gradient py-10 text-3xl lg:text-5xl">Kontakt</h1>
 
       <p className="font-bold text-gray-500 text-lg">E-Mail</p>
-      <a href="mailto:finn.evermann@icloud.com" className="text-gradient text-lg">
-        finn.evermann@icloud.com
+      <a href={`mailto:${contactEmail}`} className="text-gradient text-lg">
+        {contactEmail}
       </a>
       <div className="flex items-center pt-10">
         {socialIcons.map((icon) => (
@@ -32,5 +32,3 @@ async function ContactSection() {
     </section>
   );
 }
-
-export default ContactSection;
