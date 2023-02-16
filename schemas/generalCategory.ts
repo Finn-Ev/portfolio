@@ -1,30 +1,28 @@
 import { defineField, defineType } from 'sanity';
 
 export default defineType({
-  name: 'project',
-  title: 'Projekt',
+  name: 'generalCategory',
+  title: 'General Category',
   type: 'document',
   fields: [
     defineField({
       name: 'title',
-      title: 'Titel des Projekts',
+      title: 'Titel',
+      type: 'string',
+    }),
+
+    defineField({
+      name: 'description',
+      title: 'Beschreibung',
+      type: 'text',
+    }),
+    defineField({
+      name: 'color',
+      title: 'Farbe',
       type: 'string',
     }),
     defineField({
-      name: 'url',
-      title: 'URL des Projekts',
-      type: 'url',
-    }),
-    defineField({
-      name: 'mainImage',
-      title: 'Preview-Bild',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
-    }),
-    defineField({
-      name: 'stack',
+      name: 'stacks',
       title: 'Stack',
       type: 'array',
       of: [{ type: 'reference', to: { type: 'technology' } }],

@@ -1,19 +1,19 @@
-import {defineField, defineType} from 'sanity'
+import { defineField, defineType } from 'sanity';
 
 export default defineType({
-  name: 'category',
-  title: 'Category',
+  name: 'resume',
+  title: 'Lebenslauf',
   type: 'document',
   fields: [
     defineField({
-      name: 'title',
-      title: 'Title',
+      name: 'year',
+      title: 'Jahr',
       type: 'string',
     }),
     defineField({
       name: 'description',
-      title: 'Description',
+      title: 'Was ist in diesem Jahr passiert',
       type: 'text',
     }),
   ],
-})
+});

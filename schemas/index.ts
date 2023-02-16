@@ -1,6 +1,15 @@
-import blockContent from './blockContent';
-import category from './category';
+import generalCategory from './generalCategory';
+import socialIcons from './socialIcon';
+import video from './video';
+import technology from './technology';
+import resume from './resume';
 import project from './project';
-import author from './author';
 
-export const schemaTypes = [project, author, category, blockContent];
+export const schemaTypes = [
+  generalCategory,
+  socialIcons,
+  video,
+  technology,
+  resume,
+  project,
+];

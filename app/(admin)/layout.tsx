@@ -1,7 +1,4 @@
-import '../styles/global.css';
-import Header from './Header';
-
-export default function RootLayout({
+export default function StudioLayout({
   children,
 }: {
   children: React.ReactNode;
@@ -10,7 +7,6 @@ export default function RootLayout({
     <html>
       <head />
       <body>
-        <Header />
         <main> {children}</main>
       </body>
     </html>
