@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import HomeSection from './sections/HomeSection';
 
 export const metadata: Metadata = {
   title: {
@@ -8,5 +9,9 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <div className="w-full md:text-gray-500">Hello world</div>;
+  return (
+    <>
+      <HomeSection />
+    </>
+  );
 }
