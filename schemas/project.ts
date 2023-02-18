@@ -38,7 +38,7 @@ export default defineType({
       name: "stack",
       title: "Stack",
       type: "array",
-      of: [{ type: "reference", to: { type: "technology" }, validation: (Rule) => Rule.required().max(3) }],
+      of: [{ type: "reference", to: { type: "technology" } }],
     }),
   ],
 });
