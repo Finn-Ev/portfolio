@@ -13,8 +13,6 @@ async function ProjectsSection() {
         {projects.map((project) => (
           <ProjectTile project={project} key={project._id} />
         ))}
-        <ProjectTile project={projects[0]} />
-        <ProjectTile project={projects[0]} />
       </div>
     </section>
   );
