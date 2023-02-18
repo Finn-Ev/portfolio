@@ -14,15 +14,15 @@ function LandingSection({
   moreInfoLink: string;
 }) {
   return (
-    <section id="home" className="mb-8 lg:mb-0">
-      <div className="flex flex-col lg:flex-row-reverse justify-start lg:justify-between items-start lg:items-center relative">
+    <section id="home" className="mb-4 lg:mb-0">
+      <div className="flex flex-col lg:flex-row-reverse justify-start lg:justify-between items-start lg:items-center">
         <div className="flex flex-1 justify-center lg:justify-end mb-3">
           <Image
             src={urlFor(heroImage).url()}
             alt="Portrait"
             width={500}
             height={500}
-            className="rounded-full h-1/2 w-1/2 lg:h-2/3 lg:w-2/3"
+            className="rounded-full h-2/3 w-2/3 mb-2 lg:mb-0"
           />
         </div>
         <div className="flex-1">
@@ -37,15 +37,11 @@ function LandingSection({
                 Weitere Informationen zu meiner Person finden Sie&nbsp;
                 <a target="_blank" className="" href={moreInfoLink}>
                   <span className="text-gradient underline">hier</span>.
-                  {/* <ArrowTopRightOnSquareIcon className="inline ml-1 mb-1" height={20} width={20} /> */}
                 </a>
               </span>
             </div>
           </div>
         </div>
-        {/* <a href="#projects" className="hidden self-center">
-          <ChevronDoubleDownIcon height={45} width={45} />
-        </a> */}
       </div>
     </section>
   );
