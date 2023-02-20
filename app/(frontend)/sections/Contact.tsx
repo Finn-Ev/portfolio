@@ -23,7 +23,7 @@ export default async function ({ contactEmail }: { contactEmail: string }) {
               style={{ width: 30, height: 30 }}
               key={icon._id}
             />
-            <a href={icon.url} className="inline-block ml-2 mr-5 hover:underline ">
+            <a href={icon.url} className="inline-block ml-2 mr-5 hover:underline">
               {icon.name}
             </a>
           </>
